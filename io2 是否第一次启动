@@ -1,0 +1,15 @@
+app.component.ts
+
+import { Storage } from '@ionic/storage';
+
+
+constructor(private st: Storage){
+  this.st.get('firstIn').then(ret => {
+    if(ret){
+        this.rootPage = 'Home';
+    }else{
+        this.st.set("firstIn",true);
+        this.rootPage = 'Welcome';
+    }
+  })
+}

@@ -1,0 +1,26 @@
+1.       Cannot find module "ionic-native"
+
+  （0） npm install @ionic-native/core --save
+   
+   （1）Install the Needed Plugins：
+   
+   npm install @ionic-native/camera --save
+   
+  （2） Add Plugins to Your App's Module
+        ...
+
+        import { Camera } from '@ionic-native/camera';
+
+        ...
+
+        @NgModule({
+          ...
+
+          providers: [
+            ...
+            Camera
+            ...
+          ]
+          ...
+        })
+        export class AppModule { }

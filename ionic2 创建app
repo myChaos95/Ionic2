@@ -1,0 +1,9 @@
+ionic start _name _mode _version;
+cd _name
+cnpm install
+
+cnpm install @ionic-native/core --save
+
+cordova plugin add cordova-sqlite-storage --save
+
+cnpm install --save @ionic/storage
